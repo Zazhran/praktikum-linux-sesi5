@@ -1,0 +1,33 @@
+Generate file CSV produk lama untuk simulasi data migration dan data cleaning.
+
+Kolom:
+- kode_produk
+- nama_produk
+- harga
+- stok
+- kategori
+- last_updated
+
+Requirements:
+- format harga campuran:
+  - Rp 25.000
+  - 25rb
+  - $3.50
+  - null
+  - kosong
+- nama produk memiliki inkonsistensi:
+  - uppercase/lowercase campur
+  - spasi berlebih
+  - typo ringan
+- kategori memiliki variasi:
+  - pakaian
+  - PAKAIAN
+  - clothes
+  - pakian
+- last_updated campuran format:
+  - unix epoch
+  - dd/mm/yyyy
+  - yyyy-mm-dd
+  - nama bulan
+- beberapa kode_produk duplikat dengan timestamp berbeda
+- output hanya CSV
