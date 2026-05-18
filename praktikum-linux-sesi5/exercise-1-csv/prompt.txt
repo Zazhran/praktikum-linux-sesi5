@@ -1,0 +1,25 @@
+Generate file CSV berisi 1000 data customer.
+
+Kolom:
+- id
+- nama
+- email
+- no_hp
+- tanggal_daftar
+- status
+
+Requirements:
+- tanggal_daftar harus memiliki format campuran:
+  - dd/mm/yyyy
+  - dd-mm-yyyy
+  - yyyy/mm/dd
+  - yyyy-mm-dd
+  - dd mm yyyy
+  - beberapa tahun 2 digit
+- status random:
+  - active
+  - inactive
+  - banned
+- gunakan nama dan email realistis
+- beberapa data sengaja dibuat tidak konsisten untuk latihan cleaning data
+- output hanya CSV tanpa penjelasan
