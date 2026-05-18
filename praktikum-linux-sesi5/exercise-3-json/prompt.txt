@@ -1,0 +1,23 @@
+Generate dataset JSON Lines (JSONL) berisi data order ecommerce.
+
+Setiap line harus berupa object JSON valid.
+
+Field:
+- order_id
+- customer
+  - id
+  - name
+- items
+  - sku
+  - qty
+  - price
+- total
+- order_date
+
+Requirements:
+- minimal 1000 order
+- setiap order memiliki beberapa item
+- total kadang sengaja tidak sesuai dengan sum(items) untuk kebutuhan validasi
+- gunakan tanggal realistis lintas beberapa minggu
+- gunakan SKU produk acak
+- output hanya JSONL tanpa markdown
