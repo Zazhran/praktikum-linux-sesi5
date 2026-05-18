@@ -1,0 +1,26 @@
+Generate file nginx access log sebanyak 5000 baris.
+
+Format harus menyerupai nginx access log asli dan mengandung:
+- IP address
+- timestamp
+- HTTP method
+- endpoint/path
+- status code
+- response size
+- referer
+- user-agent
+- response time di akhir baris
+
+Requirements:
+- gunakan endpoint umum seperti:
+  /login
+  /admin
+  /api/*
+  /checkout
+  /products
+- campurkan status:
+  200, 301, 404, 500
+- beberapa IP harus terlihat mencurigakan:
+  - request berulang ke /login atau /admin
+- response time bervariasi
+- output hanya log mentah
