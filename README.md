@@ -1,29 +1,50 @@
-#Laporan Tugas Praktikum: Linux Ubuntu Server
+# Laporan Tugas Praktikum — Linux Ubuntu Server
 
-**Nama** : Zahran Hilal Ramadhan
-**Prodi** : Teknik Informatika
+**Nama**  : Zahran Hilal Ramadhan  
+**Prodi** : Teknik Informatika  
 
-### Catatan pengerjaan
-Pengerjaan tugas praktikum individu ini menggunakan Linux Ubuntu Server dengan menggunakan VirtualBox. Lalu, menggunakan local terminal atau Power Shell untuk mengerjakan transfer dari local menuju server menggunakan scp atau rsync.
+---
 
-### Kesulitan
-Dalam pengerjaan tugas praktikum ini saya merasa sangat kesulitan karena proses codingnya dilakukan dalam bentuk terminal tidak seperti IDE ataupun notepad, sehingga typo bahkan spasi jauh lebih sensitif dan sudah tidak terhitung jari berapa kali saya typo hanya karena spasi.
-Pada saat awal awal, saya menemukan kesulitan dimana file yang telah saya buat pasti menghilang dan itu membuat saya cukup stress dua hari karena tugasnya tidak ada kemajuan sama sekali. Hingga saatnya saya sadar ternyata saya belum  sepenuhnya install ubuntu servernya karena saya hanya memberikan 1GB space pada saat pembuatan server di virtualbox. Masalah tersebut teratasi dengan menambahkan space dari 1GB menjadi 10GB.
+## Catatan Pengerjaan
+
+Pengerjaan tugas praktikum individu ini dilakukan menggunakan Linux Ubuntu Server melalui VirtualBox. Selain itu, saya juga menggunakan terminal lokal atau PowerShell untuk melakukan transfer file dari local machine menuju Ubuntu Server menggunakan `scp` maupun `rsync`.
+
+---
+
+## Kesulitan
+
+Dalam pengerjaan tugas praktikum ini, saya mengalami cukup banyak kesulitan karena seluruh proses dilakukan melalui terminal, berbeda dengan IDE atau text editor biasa. Akibatnya, typo maupun kesalahan spasi menjadi sangat sensitif dan sering menyebabkan error saat menjalankan command.
+
+Pada awal pengerjaan, saya juga mengalami masalah di mana file yang telah dibuat sering menghilang. Hal tersebut membuat proses pengerjaan cukup terhambat selama beberapa hari karena tugas tidak menunjukkan perkembangan yang berarti. Setelah melakukan pengecekan lebih lanjut, saya menyadari bahwa Ubuntu Server belum terpasang dengan optimal karena saya hanya memberikan alokasi storage sebesar 1GB pada VirtualBox. Masalah tersebut akhirnya teratasi setelah kapasitas storage ditingkatkan dari 1GB menjadi 10GB.
+
+---
 
 ## Refleksi
-Dari pengalaman saya mengerjakan tugas praktikum ini, dapat saya ambil pelajaran bahwa pengerjaan teknis seperti ini membutuhkan kejelian yang tinggi, meskipun bisa saja kita menyuruh AI untuk programnya, namun kita juga perlu mengetahui bagaimana basic dari ubuntu, dan siapa lagi selain kita yang akan mengetiknya
 
+Dari pengalaman mengerjakan tugas praktikum ini, saya menyadari bahwa pengerjaan teknis berbasis terminal membutuhkan ketelitian dan pemahaman dasar yang baik terhadap sistem Linux. Meskipun AI dapat membantu dalam memberikan contoh command maupun script, pemahaman dasar tetap diperlukan agar pengguna dapat mengetahui fungsi command yang dijalankan serta mampu melakukan debugging ketika terjadi error.
 
-##Dokumentasi 
+Selain itu, praktikum ini juga memberikan pengalaman baru dalam memahami workflow Linux server, proses transfer file, serta penggunaan tools command line untuk data processing.
+
+---
+
+# Dokumentasi
 
 <img width="1920" height="1080" alt="SSH connect to local" src="https://github.com/user-attachments/assets/89ade106-2320-40a1-8510-3a4b379f2c56" />
-**SSH Connect from ubuntu server to local**
+
+**SSH Connect from Ubuntu Server to Local**
+
+---
 
 <img width="1920" height="1080" alt="test scp + sha256" src="https://github.com/user-attachments/assets/199b31ac-4171-4962-8a0d-aa65a0f61bdf" />
-**.scp Data transfer from local to ubuntu server**
-Note : Lebih praktis menggunakan .scp karena syntaxnya yang tidak seribet rsync, dan kebetulan saya membuat folder dan filenya diluar ubuntu server, jadi saya langsung transfer folder dengan menggunakan .scp
+
+**SCP Data Transfer from Local to Ubuntu Server**
+
+> Note: Saya lebih sering menggunakan `scp` karena syntax-nya lebih sederhana dibandingkan `rsync`. Selain itu, file dan folder praktikum dibuat di luar Ubuntu Server sehingga proses transfer folder secara langsung menggunakan `scp` terasa lebih praktis.
+
+---
 
 <img width="1920" height="1080" alt="test rsync + sha256" src="https://github.com/user-attachments/assets/8e203c3b-480e-4189-9b94-f62b9e86f187" />
-**-rsync Data transfer from local to ubuntu server**
-Note : Secara teknis -rsync lebih diunggulkan karena kelebihannya yang menguntungkan project besar, karena ketika terjadi perubahan rsync akan compare dan tidak perlu mentransfer keseluruhannya berulang ulang. Karena itulah saya lebih prefer menggunakan .scp karena secara fungsi sudah terpenuhi, dan karena cakupannya hanya baru sebatas tugas.
 
+**Rsync Data Transfer from Local to Ubuntu Server**
+
+> Note: Secara teknis, `rsync` lebih unggul untuk project berskala besar karena hanya mentransfer perubahan file yang terjadi tanpa perlu mengirim ulang seluruh folder. Namun, karena kebutuhan tugas ini masih sederhana, saya lebih memilih menggunakan `scp` yang lebih cepat dan mudah digunakan.
